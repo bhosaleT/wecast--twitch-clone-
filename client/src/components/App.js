@@ -8,7 +8,7 @@ import StreamList from "./Streams/StreamList";
 import StreamShow from "./Streams/StreamShow";
 
 import Header from "./Header";
-import '../App.css';
+
 
 
 const App = () => {
