@@ -7,14 +7,15 @@ import StreamEdit from "./Streams/StreamEdit";
 import StreamList from "./Streams/StreamList";
 import StreamShow from "./Streams/StreamShow";
 
-import Header from './Header';
+import Header from "./Header";
+import '../App.css';
+
 
 const App = () => {
-  return (
-    <div>
-    <Header />
+  return <div className="ui container custom-class">
       <BrowserRouter>
         <div>
+          <Header />
           <Route path="/" exact component={StreamList} />
           <Route path="/streams/new" exact component={StreamCreate} />
           <Route path="/streams/edit" exact component={StreamEdit} />
@@ -22,8 +23,7 @@ const App = () => {
           <Route path="/streams/show" exact component={StreamShow} />
         </div>
       </BrowserRouter>
-    </div>
-  );
+    </div>;
 };
 
 export default App;
