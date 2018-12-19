@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <div className="ui menu ">
       <Link to="/" className="header item">
-        WeCast
+        We Cast
       </Link>
       <div className="right menu" />
       <Link to="/" className=" item">
