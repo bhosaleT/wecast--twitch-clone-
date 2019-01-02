@@ -1,0 +1,19 @@
+{
+  "streams": [
+    {
+      "title": "new streaam",
+      "description": "this is the best stream",
+      "id": 1
+    },
+    {
+      "title": "new streaam",
+      "description": "this is the best stream",
+      "id": 2
+    },
+    {
+      "description": "This is a game stream",
+      "title": "stream",
+      "id": 3
+    }
+  ]
+}
