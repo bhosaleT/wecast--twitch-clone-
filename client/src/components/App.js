@@ -1,30 +1,32 @@
 import React from "react";
-import { Router, Route } from "react-router-dom";
+import { Router, Route, Switch } from "react-router-dom";
 
 import StreamCreate from "./Streams/StreamCreate";
 import StreamDelete from "./Streams/StreamDelete";
 import StreamEdit from "./Streams/StreamEdit";
 import StreamList from "./Streams/StreamList";
 import StreamShow from "./Streams/StreamShow";
-import history from '../history';
+import history from "../history";
 
 import Header from "./Header";
 
-
-
 const App = () => {
-  return <div className="ui container custom-class">
+  return (
+    <div className="ui container custom-class">
       <Router history={history}>
         <div>
           <Header />
-          <Route path="/" exact component={StreamList} />
-          <Route path="/streams/new" exact component={StreamCreate} />
-          <Route path="/streams/edit/:id" exact component={StreamEdit} />
-          <Route path="/streams/delete/:id" exact component={StreamDelete} />
-          <Route path="/streams/show" exact component={StreamShow} />
+          <Switch>
+            <Route path="/" exact component={StreamList} />
+            <Route path="/streams/new" exact component={StreamCreate} />
+            <Route path="/streams/edit/:id" exact component={StreamEdit} />
+            <Route path="/streams/delete/:id" exact component={StreamDelete} />
+            <Route path="/streams/:id" exact component={StreamShow} />
+          </Switch>
         </div>
       </Router>
-    </div>;
+    </div>
+  );
 };
 
 export default App;
